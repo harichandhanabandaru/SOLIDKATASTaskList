@@ -21,13 +21,13 @@ public class ViewByDeadLine {
 
         for (Map.Entry<String, List<Task>> project : tasks.entrySet()) {
 
-            out.println(project.getKey());
+//            out.println(project.getKey());
             for (Task task : project.getValue()) {
                     if(task.getDeadLine() != null) {
 
                         if (task.getDeadLine().equals(commandLine)) {
 
-                            out.printf("    [%c] %d: %s %s %s %n", (task.isDone() ? 'x' : ' '), task.getId(), task.getDescription(), task.getCreatedAt(), task.getDeadLine());
+                            out.printf("    [%c] %s: %s %s %s %n", (task.isDone() ? 'x' : ' '), task.getId(), task.getDescription(), task.getCreatedAt(), task.getDeadLine());
                             out.println();
                         }
                     }

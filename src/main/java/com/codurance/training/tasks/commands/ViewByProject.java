@@ -24,7 +24,7 @@ public class ViewByProject {
             out.println(project.getKey());
             if (project.getKey().equals(commandLine)) {
                 for (Task task : project.getValue()) {
-                    out.printf("    [%c] %d: %s %s %s %n", (task.isDone() ? 'x' : ' '), task.getId(), task.getDescription(), task.getCreatedAt(), task.getDeadLine());
+                    out.printf("    [%c] %s: %s %s %s %n", (task.isDone() ? 'x' : ' '), task.getId(), task.getDescription(), task.getCreatedAt(), task.getDeadLine());
                     out.println();
 
                 }

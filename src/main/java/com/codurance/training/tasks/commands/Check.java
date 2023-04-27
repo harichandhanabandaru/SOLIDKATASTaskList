@@ -20,16 +20,15 @@ public class Check {
     }
 
     private void setDone(String idString, boolean done) {
-        int id = Integer.parseInt(idString);
         for (Map.Entry<String, List<Task>> project : tasks.entrySet()) {
             for (Task task : project.getValue()) {
-                if (task.getId() == id) {
+                if (task.getId().equals(idString)) {
                     task.setDone(done);
                     return;
                 }
             }
         }
-        out.printf("Could not find a task with an ID of %d.", id);
+        out.printf("Could not find a task with an ID of %d.", idString);
         out.println();
     }
 

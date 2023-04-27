@@ -15,9 +15,9 @@ public class AddTask {
     private final PrintWriter out;
     private final Map<String, List<Task>> tasks ;
 
-    private  long lastId;
+    private  String lastId;
 
-    public AddTask(PrintWriter out,Map<String, List<Task>> tasks,long lastId)
+    public AddTask(PrintWriter out,Map<String, List<Task>> tasks,String lastId)
     {
         this.tasks=tasks;
         this.out=out;

@@ -37,13 +37,15 @@ public class Execute implements Execution {
     }
 
     private void add(String commandLine) {
-        String[] subcommandRest = commandLine.split(" ", 2);
+        String[] subcommandRest = commandLine.split(" ");
         String subcommand = subcommandRest[0];
+        int subcommandLength=subcommandRest.length;
+        String taskIdByUser = subcommandLength> 3 ? subcommandRest[2] : String.valueOf(nextId());
         if (subcommand.equals("project")) {
             new AddProject(tasks).addProject(subcommandRest[1]);
         } else if (subcommand.equals("task")) {
-            String[] projectTask = subcommandRest[1].split(" ", 2);
-            new AddTask(out,tasks,nextId()).addTask(projectTask[0], projectTask[1]);
+//            String[] projectTask = subcommandRest[1].split(" ", 2);
+            new AddTask(out,tasks,taskIdByUser).addTask(subcommandRest[1],subcommandRest[subcommandLength-1]);
         }
 
 

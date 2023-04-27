@@ -5,21 +5,21 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public final class Task {
-    private final long id;
+    private final String id;
     private final String description;
     private boolean done;
 
     private Date deadLine;
 
     private Date createdAt;
-    public Task(long id, String description, boolean done,Date createdAt) {
+    public Task(String id, String description, boolean done,Date createdAt) {
         this.id = id;
         this.description = description;
         this.done = done;
         this.createdAt=createdAt;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 

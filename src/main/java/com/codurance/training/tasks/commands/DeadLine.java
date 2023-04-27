@@ -17,12 +17,9 @@ public class DeadLine {
 
     public void deadLine(String commandLine)  {
         String[] subcommandRest = commandLine.split(" ", 2);
-
-        int id = Integer.parseInt(subcommandRest[0]);
-
             for (Map.Entry<String, List<Task>> project : tasks.entrySet()) {
                 for (Task task : project.getValue()) {
-                    if (task.getId() == id) {
+                    if (task.getId().equals(subcommandRest[0])) {
                         try {
                             task.setDeadLine(new DateFormat().dateFormat(subcommandRest[1]));
                         } catch (ParseException e) {

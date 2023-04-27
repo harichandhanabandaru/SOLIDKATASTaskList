@@ -23,7 +23,7 @@ public class Show {
             out.println(project.getKey());
             for (Task task : project.getValue()) {
 
-                out.printf("    [%c] %d: %s %s %n", (task.isDone() ? 'x' : ' '), task.getId(), task.getDescription(),task.getCreatedAt());
+                out.printf("    [%c] %s: %s %s %n", (task.isDone() ? 'x' : ' '), task.getId(), task.getDescription(),task.getCreatedAt());
                 out.println();
             }
             out.println();

@@ -18,6 +18,13 @@ public class Help {
         out.println("  add task <project name> <task description>");
         out.println("  check <task ID>");
         out.println("  uncheck <task ID>");
+        out.println("  deadline <task ID>  <deadLine Date>");
+        out.println("  viewByDate  <Date>");
+        out.println("  viewByDeadLine  <Date>");
+        out.println("  viewByProject  <Project Id>");
+        out.println("  today ");
+
+
         out.println();
     }
 }

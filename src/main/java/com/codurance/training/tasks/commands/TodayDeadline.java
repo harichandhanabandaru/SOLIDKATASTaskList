@@ -26,7 +26,7 @@ public class TodayDeadline {
                     if(task.getDeadLine() != null) {
                         if (task.getDeadLine().equals(new DateFormat().formatDate(new Date()))) {
 
-                            out.printf("    [%c] %d: %s %s %n", (task.isDone() ? 'x' : ' '), task.getId(), task.getDescription(), task.getDeadLine());
+                            out.printf("    [%c] %s: %s %s %n", (task.isDone() ? 'x' : ' '), task.getId(), task.getDescription(), task.getDeadLine());
                             out.println();
                         }
                     }
